@@ -1,0 +1,19 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/knowledgebase?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+  thymeleaf:
+    cache: false
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml		#扫描映射文件
+  type-aliases-package: org.pegcode.dao.entity		#实体类别名
+  configuration:
+    map-underscore-to-camel-case: true		#驼峰命名规则
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl	#控制台输出SQL
