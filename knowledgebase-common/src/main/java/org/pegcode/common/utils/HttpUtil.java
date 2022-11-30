@@ -12,6 +12,9 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * http工具类 org.apache.httpcomponents
+ */
 public class HttpUtil {
 
 
