@@ -24,7 +24,7 @@ public class MybatisPlusGenerator {
         GlobalConfig globalConfig = new GlobalConfig();
         String propertyPath = System.getProperty("user.dir");//获取当前系统目录
         globalConfig.setOutputDir(propertyPath+"/src/main/java");//输出到哪个目录
-        globalConfig.setAuthor("peg");
+        globalConfig.setAuthor("dreampig123");
         globalConfig.setOpen(false);//生成完不打开window文件夹
         globalConfig.setFileOverride(true);//是否覆盖原来生成的
         globalConfig.setServiceName("%sService");//去掉Service 默认的I前缀

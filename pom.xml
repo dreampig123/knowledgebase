@@ -7,7 +7,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>knowledgebase-common</module>
-        <module>knowledgebase-dao</module>
         <module>knowledgebase-core</module>
         <module>knowledgebase-web</module>
     </modules>

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@MapperScan("org.pegcode.dao.mapper")
+@MapperScan("org.pegcode.core.mapper")
 @ComponentScan({"org.pegcode.web.controller", "org.pegcode.core.service"})
 @SpringBootApplication
 public class SpringContextApplication {

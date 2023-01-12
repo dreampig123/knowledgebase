@@ -1,4 +1,4 @@
-package org.pegcode.dao.entity;
+package org.pegcode.core.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
@@ -17,8 +17,8 @@ import lombok.EqualsAndHashCode;
  * 角色表
  * </p>
  *
- * @author peg
- * @since 2022-11-09
+ * @author dreampig123
+ * @since 2023-01-12
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -27,20 +27,27 @@ public class TbRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "id")
+    @ApiModelProperty(value = "角色id")
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     @ApiModelProperty(value = "角色名")
-    private String name;
+    private String roleName;
+
+    @ApiModelProperty(value = "角色启用状态")
+    private Integer roleStatus;
+
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
     @ApiModelProperty(value = "创建时间")
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")
     private Date updateTime;
 
-    @ApiModelProperty(value = "逻辑删除，0：未删除，1：已删除")
+    @ApiModelProperty(value = "逻辑删除标识")
     private Integer state;
 
 

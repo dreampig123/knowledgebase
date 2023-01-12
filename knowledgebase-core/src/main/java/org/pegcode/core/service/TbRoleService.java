@@ -1,16 +1,15 @@
 package org.pegcode.core.service;
 
-
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.pegcode.dao.entity.TbRole;
+import org.pegcode.core.entity.TbRole;
 
 /**
  * <p>
  * 角色表 服务类
  * </p>
  *
- * @author peg
- * @since 2022-11-09
+ * @author dreampig123
+ * @since 2023-01-12
  */
 public interface TbRoleService extends IService<TbRole> {
 

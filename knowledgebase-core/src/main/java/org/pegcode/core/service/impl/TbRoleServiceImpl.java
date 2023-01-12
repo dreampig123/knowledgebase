@@ -2,9 +2,9 @@ package org.pegcode.core.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.pegcode.core.entity.TbRole;
+import org.pegcode.core.mapper.TbRoleMapper;
 import org.pegcode.core.service.TbRoleService;
-import org.pegcode.dao.entity.TbRole;
-import org.pegcode.dao.mapper.TbRoleMapper;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
  * 角色表 服务实现类
  * </p>
  *
- * @author peg
- * @since 2022-11-09
+ * @author dreampig123
+ * @since 2023-01-12
  */
 @Service
 public class TbRoleServiceImpl extends ServiceImpl<TbRoleMapper, TbRole> implements TbRoleService {

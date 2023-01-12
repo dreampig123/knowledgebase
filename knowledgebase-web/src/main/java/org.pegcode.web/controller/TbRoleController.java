@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
  * 角色表 前端控制器
  * </p>
  *
- * @author peg
- * @since 2022-11-09
+ * @author dreampig123
+ * @since 2023-01-12
  */
 @RestController
 @RequestMapping("/generator/tbRole")

@@ -10,13 +10,18 @@
         <module name="knowledgebase-common" />
         <module name="knowledgebase-core" />
         <module name="knowledgebase-web" />
-        <module name="knowledgebase-dao" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="knowledgebase" target="1.8" />
+      <module name="knowledgebase-common" target="1.8" />
+      <module name="knowledgebase-core" target="1.8" />
+      <module name="knowledgebase-dao" target="1.8" />
+      <module name="knowledgebase-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="knowledgebase" options="" />
       <module name="knowledgebase-common" options="-parameters" />
       <module name="knowledgebase-core" options="-parameters" />
       <module name="knowledgebase-dao" options="-parameters" />
