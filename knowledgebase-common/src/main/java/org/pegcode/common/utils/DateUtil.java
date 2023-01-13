@@ -1,7 +1,10 @@
 package org.pegcode.common.utils;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * 日期工具类
@@ -72,5 +75,16 @@ public class DateUtil {
             return true;
         }
         return false;
+    }
+
+    /**
+     * date转localdatetime
+     * @param date
+     * @return
+     */
+    public static LocalDateTime dateToLocalDateTime(Date date) {
+        Instant instant = date.toInstant();
+        ZoneId zoneId = ZoneId.systemDefault();
+        return instant.atZone(zoneId).toLocalDateTime();
     }
 }
