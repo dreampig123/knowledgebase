@@ -13,4 +13,6 @@ import org.pegcode.core.entity.TbUser;
  */
 public interface TbUserService extends IService<TbUser> {
 
+    TbUser getUserByCode(String userCode);
+
 }
