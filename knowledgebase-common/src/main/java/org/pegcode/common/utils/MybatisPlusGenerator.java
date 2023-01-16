@@ -54,7 +54,7 @@ public class MybatisPlusGenerator {
 
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("tb_user","tb_role");//设置要映射的数据库表名，此处虽只写了一个参数"user"，但是要知道它可以同时写多个参数
+        strategy.setInclude("tb_catalogue","tb_online_document","tb_file");//设置要映射的数据库表名，此处虽只写了一个参数"user"，但是要知道它可以同时写多个参数
 
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//下划线驼峰映射

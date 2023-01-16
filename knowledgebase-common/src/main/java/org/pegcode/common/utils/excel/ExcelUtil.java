@@ -236,7 +236,7 @@ public class ExcelUtil {
         @ExcelTitle("薪水")
         private Double salary;
 
-        @Order(3)
+        @Order(4)
         @ExcelTitle("生日")
         private Date birthDay;
     }
