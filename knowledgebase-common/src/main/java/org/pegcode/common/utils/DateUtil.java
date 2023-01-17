@@ -60,13 +60,14 @@ public class DateUtil {
 
     /**
      * 判断时间是否在时间范围内
+     *
      * @param time
      * @param startTime
      * @param endTime
      * @return
      */
     public boolean checkInTimeRange(LocalDateTime time, LocalDateTime startTime, LocalDateTime endTime) {
-        if(time.isEqual(startTime)||time.isEqual(endTime)){
+        if (time.isEqual(startTime) || time.isEqual(endTime)) {
             //等于开始时间或结束时间
             return true;
         }
@@ -79,6 +80,7 @@ public class DateUtil {
 
     /**
      * date转localdatetime
+     *
      * @param date
      * @return
      */
@@ -86,5 +88,9 @@ public class DateUtil {
         Instant instant = date.toInstant();
         ZoneId zoneId = ZoneId.systemDefault();
         return instant.atZone(zoneId).toLocalDateTime();
+    }
+
+    public static long currentTimestamp() {
+        return System.currentTimeMillis();
     }
 }

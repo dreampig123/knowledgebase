@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Configuration
-@Component
+//@Configuration
+//@Component
 public class CrosOriginConfigurer implements WebMvcConfigurer {
 
     @Override

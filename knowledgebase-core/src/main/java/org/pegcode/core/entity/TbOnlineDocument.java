@@ -1,16 +1,16 @@
 package org.pegcode.core.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -18,7 +18,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author dreampig123
- * @since 2023-01-16
+ * @since 2023-01-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -40,6 +40,9 @@ public class TbOnlineDocument implements Serializable {
     @ApiModelProperty(value = "文档内容")
     private String docContent;
 
+    @ApiModelProperty(value = "文档目录id")
+    private Long catalogueId;
+
     @ApiModelProperty(value = "备注")
     private String remark;
 
@@ -47,7 +50,7 @@ public class TbOnlineDocument implements Serializable {
     private String createId;
 
     @ApiModelProperty(value = "创建时间")
-    @TableField(fill = FieldFill.INSERT)
+    //@TableField(fill = FieldFill.INSERT)  issue:数据库时间自建，不传时间异常
     private Date createTime;
 
     @ApiModelProperty(value = "修改人")

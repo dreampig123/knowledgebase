@@ -47,7 +47,6 @@ public class TbCatalogue implements Serializable {
     private String createId;
 
     @ApiModelProperty(value = "创建时间")
-    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     @ApiModelProperty(value = "修改人")

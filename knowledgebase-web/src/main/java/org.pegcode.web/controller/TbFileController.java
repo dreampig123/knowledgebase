@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-16
  */
 @RestController
-@RequestMapping("/generator/tbFile")
+@RequestMapping("/file")
 public class TbFileController {
 
 }

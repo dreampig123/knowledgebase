@@ -3,6 +3,8 @@ package org.pegcode.core.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.pegcode.core.entity.TbCatalogue;
+import org.pegcode.core.vo.request.CatalogueRequest;
+import org.pegcode.core.vo.request.FileRequest;
 
 /**
  * <p>
@@ -13,5 +15,9 @@ import org.pegcode.core.entity.TbCatalogue;
  * @since 2023-01-16
  */
 public interface TbCatalogueService extends IService<TbCatalogue> {
+
+    int addCatalogue(CatalogueRequest catalogueRequest);
+
+    TbCatalogue getCatalogueById(long id);
 
 }

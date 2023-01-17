@@ -1,9 +1,14 @@
 package org.pegcode.web.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import io.swagger.annotations.ApiOperation;
+import org.pegcode.common.entity.response.ResponseEntity;
+import org.pegcode.core.service.TbCatalogueService;
+import org.pegcode.core.vo.request.CatalogueRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import javax.validation.Valid;
 
 /**
  * <p>
@@ -14,8 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-16
  */
 @RestController
-@RequestMapping("/generator/tbCatalogue")
+@RequestMapping("/catalogue")
 public class TbCatalogueController {
+    @Autowired
+    private TbCatalogueService catalogueService;
 
+    @ApiOperation(value = "新增目录")
+    @ExceptionHandler(RuntimeException.class)
+    @PostMapping(value = "/add")
+    public ResponseEntity addCatalogue(@RequestBody @Valid CatalogueRequest request) {
+        return ResponseEntity.success(catalogueService.addCatalogue(request));
+    }
 }
 
