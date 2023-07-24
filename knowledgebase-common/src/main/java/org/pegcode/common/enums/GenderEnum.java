@@ -12,6 +12,7 @@ public enum GenderEnum {
     private int code;
     private String info;
 
+
     public String getInfoByCode(int code){
         for (GenderEnum value : GenderEnum.values()) {
             if(value.code==code){
